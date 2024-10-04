@@ -26,23 +26,23 @@ region = Rect2(372, 0, 93, 112)
 [sub_resource type="SpriteFrames" id="SpriteFrames_qgfox"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 1.2,
 "texture": SubResource("AtlasTexture_83feg")
 }, {
-"duration": 1.0,
+"duration": 1.2,
 "texture": SubResource("AtlasTexture_yna3r")
 }, {
-"duration": 1.0,
+"duration": 1.2,
 "texture": SubResource("AtlasTexture_ruq1q")
 }, {
-"duration": 1.0,
+"duration": 1.2,
 "texture": SubResource("AtlasTexture_5wxrp")
 }, {
-"duration": 1.0,
+"duration": 1.2,
 "texture": SubResource("AtlasTexture_1a35o")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
 "speed": 5.0
 }]
 
@@ -52,12 +52,13 @@ size = Vector2(10, 34)
 [node name="Avatar" type="CharacterBody2D"]
 script = ExtResource("1_ee7w4")
 
-[node name="idle" type="AnimatedSprite2D" parent="."]
+[node name="BasicPlayerAnimation" type="AnimatedSprite2D" parent="."]
 position = Vector2(139, 1)
 scale = Vector2(1, 1.13778)
 sprite_frames = SubResource("SpriteFrames_qgfox")
-autoplay = "default"
-frame_progress = 0.531684
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.0960505
 
 [node name="Avatarcollision" type="CollisionShape2D" parent="."]
 position = Vector2(139, 41)
