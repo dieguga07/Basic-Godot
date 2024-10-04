@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=3 uid="uid://dkyxstx34md71"]
+
+[ext_resource type="Texture2D" uid="uid://djtj3jwis1ds6" path="res://assets/FREE_Samurai 2D Pixel Art/FREE_Samurai 2D Pixel Art/Sprites/IDLE.png" id="1_mmqv7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83feg"]
+atlas = ExtResource("1_mmqv7")
+region = Rect2(0, 0, 93, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yna3r"]
+atlas = ExtResource("1_mmqv7")
+region = Rect2(93, 0, 93, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ruq1q"]
+atlas = ExtResource("1_mmqv7")
+region = Rect2(186, 0, 93, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wxrp"]
+atlas = ExtResource("1_mmqv7")
+region = Rect2(279, 0, 93, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1a35o"]
+atlas = ExtResource("1_mmqv7")
+region = Rect2(372, 0, 93, 112)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qgfox"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83feg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yna3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ruq1q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wxrp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1a35o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6u6pu"]
+size = Vector2(10, 34)
+
+[node name="Avatar" type="CharacterBody2D"]
+
+[node name="idle" type="AnimatedSprite2D" parent="."]
+position = Vector2(139, 1)
+scale = Vector2(1, 1.13778)
+sprite_frames = SubResource("SpriteFrames_qgfox")
+frame_progress = 0.15106
+
+[node name="Avatarcollision" type="CollisionShape2D" parent="."]
+position = Vector2(139, 41)
+shape = SubResource("RectangleShape2D_6u6pu")
