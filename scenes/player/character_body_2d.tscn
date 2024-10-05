@@ -156,12 +156,13 @@ size = Vector2(12, 33.5)
 script = ExtResource("1_ee7w4")
 
 [node name="BasicPlayerAnimation" type="AnimatedSprite2D" parent="."]
+z_index = 4
 position = Vector2(139, 1)
 scale = Vector2(1, 1.13778)
 sprite_frames = SubResource("SpriteFrames_qgfox")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.433045
+frame_progress = 0.817189
 
 [node name="Avatarcollision" type="CollisionShape2D" parent="."]
 position = Vector2(139, 8)

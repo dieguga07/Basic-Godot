@@ -1,0 +1,18 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dq2php6lwl4a1"
+valid=false
+
+[deps]
+
+source_file="res://assets/Magic-Cliffs-Gamekit/__MACOSX/Magic-Cliffs-Gamekit/Assets/magic cliffs music/._magic cliffs.ogg"
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
