@@ -1,6 +1,6 @@
-Controls : 
+## Controls
 
-  A : left
-  D : right
-  Space : jump
-  F : attack
+### A : left
+### D : right
+### Space : jump
+### F : attack
