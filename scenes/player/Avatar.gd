@@ -21,7 +21,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_released("basic_attack") and not attack_throw:
 		attack_throw = true
 		attack_timer = attack_animation_duration
-		print("se ataco")
+		print("nuevo ataque")
 		$BasicPlayerAnimation.play("attack")
 		
 	if attack_throw:
