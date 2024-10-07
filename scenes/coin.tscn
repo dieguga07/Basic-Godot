@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://3ymn1rfb0v66"]
+
+[ext_resource type="Texture2D" uid="uid://bds33dfwxnyr8" path="res://assets/Small Fantasy Icon Pack 16x16 (Outlined).png" id="1_gyood"]
+[ext_resource type="Script" path="res://scenes/coin.gd" id="1_sfmq8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ctruo"]
+radius = 4.0
+
+[node name="coin" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_sfmq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(132, 72)
+texture = ExtResource("1_gyood")
+region_enabled = true
+region_rect = Rect2(0, 65, 16, 15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(132, 73)
+shape = SubResource("CircleShape2D_ctruo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

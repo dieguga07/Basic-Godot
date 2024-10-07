@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-const SPEED = 120.0
-const JUMP_VELOCITY = -310.0
+const SPEED = 140.0
+const JUMP_VELOCITY = -290.0
 
 var attack_throw = false #varibale que controla el estado del ataque
 var attack_animation_duration = 0.5 #tiempo qeu se tarda en hacer la animacion
