@@ -1,5 +1,6 @@
-[gd_scene load_steps=28 format=3 uid="uid://b2yk00ogwbkws"]
+[gd_scene load_steps=30 format=3 uid="uid://b2yk00ogwbkws"]
 
+[ext_resource type="Script" path="res://scenes/game_manager.gd" id="1_g5dog"]
 [ext_resource type="PackedScene" uid="uid://dkyxstx34md71" path="res://scenes/player/character_body_2d.tscn" id="1_h8jgg"]
 [ext_resource type="Texture2D" uid="uid://yj6rcp4p4gk6" path="res://assets/Pixel Art Platformer - Village Props v2.3.0/Texture/TX Chest Animation.png" id="2_05kks"]
 [ext_resource type="Texture2D" uid="uid://duaada8aurhb" path="res://assets/Pixel Art Platformer - Village Props v2.3.0/Texture/TX FX Flame.png" id="3_sl0hm"]
@@ -13,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://65bvjlsrsyd8" path="res://assets/Magic-Cliffs-Gamekit/Magic-Cliffs-Gamekit/Assets/Environment/PNG/tileset.png" id="10_em0yw"]
 [ext_resource type="PackedScene" uid="uid://3ymn1rfb0v66" path="res://scenes/coin.tscn" id="12_x7ket"]
 [ext_resource type="PackedScene" uid="uid://dgskxmuggbu75" path="res://scenes/kill_zone.tscn" id="14_foorr"]
+[ext_resource type="AudioStream" uid="uid://mcxt2bpcba2n" path="res://assets/Magic-Cliffs-Gamekit/Magic-Cliffs-Gamekit/Assets/magic cliffs music/magic cliffs.ogg" id="15_i1vnp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ddrqa"]
 texture = ExtResource("2_05kks")
@@ -4569,6 +4571,10 @@ distance = -322.125
 
 [node name="Game" type="Node2D"]
 
+[node name="Game_manager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_g5dog")
+
 [node name="Avatar" parent="." instance=ExtResource("1_h8jgg")]
 position = Vector2(-105, -37)
 
@@ -4645,3 +4651,8 @@ rotation = -0.261799
 position = Vector2(60, 10)
 shape = SubResource("WorldBoundaryShape2D_144ca")
 debug_color = Color(0.890877, 0.300042, 0.329821, 0.42)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_i1vnp")
+autoplay = true
+max_distance = 5000.0
