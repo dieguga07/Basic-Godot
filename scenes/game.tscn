@@ -4575,11 +4575,11 @@ distance = -322.125
 unique_name_in_owner = true
 script = ExtResource("1_g5dog")
 
-[node name="Avatar" parent="." instance=ExtResource("1_h8jgg")]
-position = Vector2(-105, -37)
+[node name="Avatar2" parent="." instance=ExtResource("1_h8jgg")]
+position = Vector2(20, -43)
 
-[node name="Camera2D" type="Camera2D" parent="Avatar"]
-position = Vector2(258, 23)
+[node name="Camera2D" type="Camera2D" parent="Avatar2"]
+position = Vector2(133, 29)
 rotation = -0.261799
 zoom = Vector2(2, 2.5)
 limit_bottom = 300
