@@ -8,6 +8,8 @@ var attack_throw = false #varibale que controla el estado del ataque
 var attack_animation_duration = 0.5 #tiempo qeu se tarda en hacer la animacion
 var attack_timer = 0.0 #temporizador del ataque al que le restaremos el delta
 
+@export var slash:PackedScene
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -19,10 +21,15 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 
 	if Input.is_action_just_released("basic_attack") and not attack_throw:
+		
 		attack_throw = true
 		attack_timer = attack_animation_duration
 		print("nuevo ataque")
 		$BasicPlayerAnimation.play("attack")
+		var new_slash = slash.instantiate()
+		new_slash.position = self.position 
+		add_child(new_slash)
+		
 		
 	if attack_throw:
 		attack_timer -= delta

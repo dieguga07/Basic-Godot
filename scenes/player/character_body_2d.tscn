@@ -161,8 +161,9 @@ z_index = 4
 position = Vector2(139, 1)
 scale = Vector2(1, 1.13778)
 sprite_frames = SubResource("SpriteFrames_qgfox")
-animation = &"attack"
+animation = &"idle"
 autoplay = "idle"
+frame_progress = 0.912503
 
 [node name="Avatarcollision" type="CollisionShape2D" parent="."]
 position = Vector2(139, 8)
